@@ -14,7 +14,14 @@ npm start          # http://localhost:4200
 ```
 
 `npm run build` writes a static site to `dist/pharos-prototype/browser`. The app uses hash URLs
-(`/#/case/…`), so it works from any static host. For GitHub Pages use `npm run build:pages`.
+(`/#/case/…`), so it works from any static host.
+
+## Share it with testers
+
+Live link: **https://fontsnob7.github.io/pharos-prototype/**
+
+`npm run publish` builds the site and pushes it to the `gh-pages` branch; GitHub Pages serves that branch
+(Settings → Pages → Deploy from a branch → `gh-pages` / root). Updates appear within a minute or two.
 
 Requires Node 20.19+ or 22.12+.
 
