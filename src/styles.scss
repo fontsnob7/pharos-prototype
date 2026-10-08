@@ -1,0 +1,20 @@
+
+
+:root { --px-border: #f0f0f0; }
+
+html, body { margin: 0; background: #f5f5f5; }
+body { font-family: Roboto, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: rgba(0, 0, 0, 0.88); }
+* { box-sizing: border-box; }
+
+.page { max-width: 1440px; margin: 0 auto; padding: 24px 32px; }
+.card { background: #fff; border: 1px solid var(--px-border); border-radius: 8px; padding: 20px 24px; }
+.card-h { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.card-h h3 { margin: 0; font-size: 16px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+.cnt { display: inline-grid; place-items: center; min-width: 22px; height: 20px; padding: 0 6px; border-radius: 10px; background: #f0f0f0;
+  color: rgba(0, 0, 0, 0.65); font-size: 12px; font-weight: 500; }
+
+/* Warning tooltip (Pharos/Warning Tip): 300px wide */
+.px-tip { max-width: 300px !important; }
+.px-tip .ant-tooltip-inner { width: 300px; }
+
+@media (max-width: 760px) { .page { padding: 16px; } .card { padding: 16px; } }

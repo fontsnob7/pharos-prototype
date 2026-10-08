@@ -1,0 +1,3390 @@
+{
+ "CASES": [
+  {
+   "id": "C2608060764518371",
+   "typology": "Structuring",
+   "risk": "Medium",
+   "team": "US Advanced · North America",
+   "analyst": "Adam A.",
+   "created": "2026-08-06",
+   "due": "2026-09-25",
+   "pe": "2026-08-26",
+   "subject": "Farrukh Nazarov",
+   "subjectRole": "Sender",
+   "payCountry": "TJ",
+   "summary": "Two transfers of $2,900 and $2,100 went to one receiver in Dushanbe four minutes apart, each just under the $3,000 ID threshold. 5 flagged transactions totaling $5,700 USD suggest structuring to avoid secondary ID collection.",
+   "behavior": [
+    "Customer frequently sends → Tajikistan",
+    "Customer never receives funds",
+    "Customer has transactional relations with the following countries: United States, Tajikistan"
+   ],
+   "facts": {
+    "amount": 5700,
+    "txns": 5,
+    "corridors": [
+     "US",
+     "TJ"
+    ],
+    "txnId": "7795264018",
+    "products": "WU Money Transfer",
+    "subjects": 4,
+    "agent": "USTX 10000000876625",
+    "path": "Farrukh Nazarov → Dilshod Karimzoda"
+   },
+   "systemFlags": [
+    "Structuring 3K",
+    "Multiple Consumers",
+    "Payout Avoidance",
+    "Previously Reported",
+    "Interdictions: Clear",
+    "Non PEP",
+    "Sanctions: Clear"
+   ],
+   "rules": [
+    {
+     "k": "r1",
+     "name": "Structuring 3K",
+     "code": "16.12500",
+     "text": "Any GID in the US sending 2 or more transactions each at or below $2,999.99, aggregating to $3,000 or more to 1 GID in a single day, unless a primary and secondary ID was provided. Here: $2,900 and $2,100 to Dilshod Karimzoda on 06/29/2026, 4 minutes apart."
+    },
+    {
+     "k": "r2",
+     "name": "Multiple Consumers",
+     "code": "MC",
+     "text": "One sender paid 3 different receivers in Tajikistan within the review window."
+    },
+    {
+     "k": "r3",
+     "name": "Payout Avoidance",
+     "code": "PA",
+     "text": "Both 06/29 transfers were available on 06/30/2026. One was collected that day; the other was not collected until 08/05/2026."
+    },
+    {
+     "k": "r4",
+     "name": "Previously Reported",
+     "code": "PREV",
+     "text": "SAR 56731894 was filed on this sender on 12/09/2025 for structuring ($15,750, 11 transactions)."
+    }
+   ],
+   "related": [
+    {
+     "id": "C2510240118735047",
+     "date": "2025-10-24",
+     "text": "Structuring below $3,000 to receivers in Tajikistan. SAR 56731894 filed for $15,750.",
+     "status": "Closed",
+     "outcome": "SAR Filed",
+     "detail": {
+      "team": "US Subjective",
+      "analyst": "K. Torres",
+      "notes": [
+       "Sender split $15,750 across 11 transfers between 10/02/2025 and 12/05/2025, each under $3,000.",
+       "Receivers: Madina Nazarova, Zarina Faizova, Nilufar Saidova (all Dushanbe).",
+       "Reason for filing: the apparent structuring of transactions to avoid ID collection."
+      ]
+     }
+    }
+   ],
+   "primary": {
+    "name": "Farrukh Nazarov",
+    "gid": "1000000000304719285",
+    "dob": "1985-09-12",
+    "since": "2024-03-14",
+    "globalRisk": "Medium",
+    "umn": "UMN-4471902",
+    "occupation": "Unknown",
+    "phone": "+1 415 265 3163",
+    "email": "f.nazarov85@example.com",
+    "address": "1182 Hawthorne Ln, Allen, TX 75002",
+    "addressWarn": "Profile address on file is in Istanbul, Turkey. All 5 transactions use this Texas address.",
+    "ids": [
+     {
+      "type": "Driver license",
+      "no": "49173620",
+      "iss": "US-TX"
+     }
+    ],
+    "phones": [
+     "+1 415 265 3163"
+    ],
+    "addrs": [
+     "1182 Hawthorne Ln, Allen, TX 75002",
+     "Gumussuyu Mah., Elmadag Cd. 56, Istanbul 34437, Turkey (profile)"
+    ]
+   },
+   "others": [
+    {
+     "id": "o1",
+     "name": "Dilshod Karimzoda",
+     "gid": "3000000000123519027",
+     "cc": "TJ",
+     "nat": "Tajik",
+     "risk": "Medium",
+     "dob": "1984-06-19",
+     "since": "2023-11-02",
+     "umn": "Not enrolled",
+     "occupation": "Driver",
+     "phone": "+992 907 675 067",
+     "email": "Not provided",
+     "address": "A. Navoi St 14, Dushanbe 734002",
+     "ids": [
+      {
+       "type": "Passport",
+       "no": "01943314",
+       "iss": "TJ"
+      }
+     ],
+     "phones": [
+      "+992 907 675 067",
+      "+992 918 675 067"
+     ],
+     "addrs": [
+      "A. Navoi St 14, Dushanbe 734002"
+     ]
+    },
+    {
+     "id": "o2",
+     "name": "Rustam Sharipov",
+     "gid": "2000000000282548109",
+     "cc": "TJ",
+     "nat": "Tajik",
+     "risk": "Low",
+     "dob": "1959-10-17",
+     "since": "2021-05-09",
+     "umn": "Not enrolled",
+     "occupation": "Retired",
+     "phone": "+992 988 262 042",
+     "email": "\"receiver\" (invalid)",
+     "address": "Mirzo Rizo St, Block 4, Dushanbe",
+     "addressWarn": "Two address spellings on file.",
+     "ids": [
+      {
+       "type": "National ID",
+       "no": "01982314",
+       "iss": "TJ"
+      }
+     ],
+     "phones": [
+      "+992 988 262 042"
+     ],
+     "addrs": [
+      "Mirzo Rizo St, Block 4, Dushanbe",
+      "m.rizo"
+     ]
+    },
+    {
+     "id": "o3",
+     "name": "Madina Nazarova",
+     "gid": "3000000000124168528",
+     "cc": "TJ",
+     "nat": "Tajik",
+     "risk": "Medium",
+     "dob": "1987-05-21",
+     "since": "2022-02-17",
+     "umn": "Not enrolled",
+     "occupation": "Teacher",
+     "phone": "+992 987 839 696",
+     "email": "Not provided",
+     "address": "Ayni St 7, Dushanbe 734024",
+     "ids": [
+      {
+       "type": "Passport",
+       "no": "01636653",
+       "iss": "TJ"
+      }
+     ],
+     "phones": [
+      "+992 987 839 696"
+     ],
+     "addrs": [
+      "Ayni St 7, Dushanbe 734024"
+     ]
+    }
+   ],
+   "kycLinks": [
+    {
+     "name": "Zarina Faizova",
+     "note": "Receiver on prior SAR"
+    },
+    {
+     "name": "Nilufar Saidova",
+     "note": "Receiver on prior SAR"
+    }
+   ],
+   "txns": [
+    {
+     "key": "7795264018",
+     "mtcn": "7795264018",
+     "amt": 2900,
+     "sender": "Farrukh Nazarov",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-06-29 22:16:35",
+     "receiver": "Dilshod Karimzoda",
+     "pLoc": "Orienbank · Dushanbe",
+     "pNet": "TJX37",
+     "paid": "2026-06-30 04:31",
+     "fee": 30.99,
+     "lcl": 2900,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 49173620 (US-TX)",
+     "sDob": "1985-09-12",
+     "sAddr": "1182 Hawthorne Ln, Allen, TX 75002",
+     "sPhone": "+1 415 265 3163",
+     "pId": "Passport 01943314 (TJ)",
+     "pDob": "1984-06-19",
+     "pAddr": "A. Navoi St 14, Dushanbe 734002",
+     "pPhone": "+992 907 675 067"
+    },
+    {
+     "key": "8101880246",
+     "mtcn": "8101880246",
+     "amt": 2100,
+     "sender": "Farrukh Nazarov",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-06-29 22:20:44",
+     "receiver": "Dilshod Karimzoda",
+     "pLoc": "Orienbank · Dushanbe",
+     "pNet": "TJX37",
+     "paid": "2026-08-05 02:05",
+     "fee": 30.99,
+     "lcl": 2100,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "note": "Available 06/30, collected 08/05",
+     "sId": "Driver license 49173620 (US-TX)",
+     "sDob": "1985-09-12",
+     "sAddr": "1182 Hawthorne Ln, Allen, TX 75002",
+     "sPhone": "+1 415 265 3163",
+     "pId": "Passport 01943314 (TJ)",
+     "pDob": "1984-06-19",
+     "pAddr": "A. Navoi St 14, Dushanbe 734002",
+     "pPhone": "+992 918 675 067",
+     "avail": "2026-06-30 04:31"
+    },
+    {
+     "key": "8827615612",
+     "mtcn": "8827615612",
+     "amt": 250,
+     "sender": "Farrukh Nazarov",
+     "sState": "TX",
+     "sLoc": "Walgreens #4860 · Allen TX",
+     "sent": "2026-07-01 18:36:01",
+     "receiver": "Rustam Sharipov",
+     "pLoc": "Orienbank · Dushanbe",
+     "pNet": "TJX37",
+     "paid": "2026-07-02 04:22",
+     "fee": 8,
+     "lcl": 250,
+     "cur": "USD",
+     "prod": "Retail",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 49173620 (US-TX)",
+     "sDob": "1985-09-12",
+     "sAddr": "1182 Hawthorne Ln, Allen, TX 75002",
+     "sPhone": "+1 415 265 3163",
+     "pId": "National ID 01982314 (TJ)",
+     "pDob": "1959-10-17",
+     "pAddr": "Mirzo Rizo St, Block 4, Dushanbe",
+     "pPhone": "+992 988 262 042"
+    },
+    {
+     "key": "6558605871",
+     "mtcn": "6558605871",
+     "amt": 200,
+     "sender": "Farrukh Nazarov",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-07-05 06:51:11",
+     "receiver": "Madina Nazarova",
+     "pLoc": "Agent 10000002973856",
+     "pNet": "TJX38",
+     "paid": "2026-07-09 12:46",
+     "fee": 8.99,
+     "lcl": 200,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 49173620 (US-TX)",
+     "sDob": "1985-09-12",
+     "sAddr": "1182 Hawthorne Ln, Allen, TX 75002",
+     "sPhone": "+1 415 265 3163",
+     "pId": "Passport 01636653 (TJ)",
+     "pDob": "1987-05-21",
+     "pAddr": "Ayni St 7, Dushanbe 734024",
+     "pPhone": "+992 987 839 696"
+    },
+    {
+     "key": "1847054733",
+     "mtcn": "1847054733",
+     "amt": 250,
+     "sender": "Farrukh Nazarov",
+     "sState": "TX",
+     "sLoc": "Walgreens #4860 · Allen TX",
+     "sent": "2026-07-30 18:53:03",
+     "receiver": "Rustam Sharipov",
+     "pLoc": "Agent 10000002973851",
+     "pNet": "TJX38",
+     "paid": "2026-08-03 23:45",
+     "fee": 8,
+     "lcl": 250,
+     "cur": "USD",
+     "prod": "Retail",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 49173620 (US-TX)",
+     "sDob": "1985-09-12",
+     "sAddr": "1182 Hawthorne Ln, Allen, TX 75002",
+     "sPhone": "+1 415 265 3163",
+     "pId": "National ID 01982314 (TJ)",
+     "pDob": "1959-10-17",
+     "pAddr": "m.rizo",
+     "pPhone": "+992 988 262 042"
+    }
+   ],
+   "attachments": [
+    {
+     "id": "a1",
+     "name": "Transaction Records",
+     "file": "Transaction_Records_Export_C2608.pdf",
+     "cat": "Financial Records",
+     "kind": "pdf",
+     "desc": "5 flagged transactions exported from the core system, with send and pay detail.",
+     "size": "1.1 MB",
+     "pages": 5,
+     "uploaded": "Aug 6, 2026 · 02:12",
+     "by": "System",
+     "ev": true
+    },
+    {
+     "id": "a2",
+     "name": "Customer Profile",
+     "file": "KYC_Profile_Nazarov.png",
+     "cat": "KYC",
+     "kind": "image",
+     "desc": "KYC profile with ID verification history (Texas driver license 49173620).",
+     "size": "640 KB",
+     "uploaded": "Aug 6, 2026 · 02:12",
+     "by": "System",
+     "ev": true
+    },
+    {
+     "id": "a3",
+     "name": "Prior SAR 56731894",
+     "file": "SAR_56731894_Summary.pdf",
+     "cat": "Case History",
+     "kind": "pdf",
+     "desc": "Filed 12/09/2025 for structuring. $15,750 across 11 transactions.",
+     "size": "380 KB",
+     "pages": 3,
+     "uploaded": "Sep 23, 2026 · 11:12",
+     "by": "Adam A.",
+     "ev": true
+    },
+    {
+     "id": "a4",
+     "name": "Receiver ID Images",
+     "file": "Payout_ID_Scans.png",
+     "cat": "KYC",
+     "kind": "image",
+     "desc": "Passport images for Dilshod Karimzoda and Madina Nazarova captured at payout.",
+     "size": "2.2 MB",
+     "uploaded": "Aug 6, 2026 · 02:12",
+     "by": "System",
+     "ev": false
+    }
+   ],
+   "log": [
+    {
+     "id": "l1",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:14:20 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Prior SAR 56731894 (12/09/2025) was filed for structuring to avoid ID collection. Same sender, same corridor."
+    },
+    {
+     "id": "l2",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:10:05 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Payout avoidance: MTCN 8101880246 was available 06/30 but not collected until 08/05, while 7795264018 was collected on 06/30."
+    },
+    {
+     "id": "l3",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:07:41 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Sender ID, DOB, address and phone are consistent across all 5 transactions. No false data and no ID sharing on the pay side."
+    },
+    {
+     "id": "l4",
+     "type": "Review",
+     "ts": "2026-09-23 11:03:12 AM",
+     "who": "Adam A.",
+     "text": "Adam A. opened case."
+    },
+    {
+     "id": "l5",
+     "type": "Transaction",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Flagged transaction 8101880246: $2,100 sent to Dilshod Karimzoda via WU Digital."
+    },
+    {
+     "id": "l6",
+     "type": "Transaction",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Flagged transaction 7795264018: $2,900 sent to Dilshod Karimzoda via WU Digital."
+    },
+    {
+     "id": "l7",
+     "type": "Assignment",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Case assigned to analyst Adam A. (US Advanced)."
+    },
+    {
+     "id": "l8",
+     "type": "Case Created",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Case auto-generated by rule 16.12500 (Structuring 3K) and routed to US Advanced, Auto Tier 2."
+    }
+   ],
+   "media": [
+    {
+     "id": "m1",
+     "src": "Central Asia Business Wire",
+     "kind": "News",
+     "ago": "2 hours ago",
+     "head": "Tajik remittance volumes rise as migrant labor shifts toward Turkey",
+     "date": "Sep 23, 2026 · 09:10 AM",
+     "rel": 22,
+     "sum": "Regional coverage of remittance flows from the US and Turkey to Tajikistan. The subject is not named. Relevant only as corridor context.",
+     "url": "https://news.example.com/central-asia/remittances-q3"
+    },
+    {
+     "id": "m2",
+     "src": "@f_nazarov",
+     "kind": "Social",
+     "ago": "3 days ago",
+     "head": "Profile lists Istanbul and Dallas; posts about long-haul freight work",
+     "date": "Sep 20, 2026 · 06:44 PM",
+     "rel": 61,
+     "sum": "Public profile likely belongs to the subject: matching name, birth year and hometown. Lists both Istanbul and Dallas, which fits the two addresses on file. No adverse content.",
+     "url": "https://social.example.com/f_nazarov"
+    },
+    {
+     "id": "m3",
+     "src": "Sanctions & watchlists",
+     "kind": "Registry",
+     "ago": "Today",
+     "head": "No match for the subject or 3 counterparties",
+     "date": "Sep 23, 2026 · 11:15 AM",
+     "rel": 0,
+     "sum": "Screened against OFAC SDN, consolidated lists and PEP databases. No matches for Farrukh Nazarov, Dilshod Karimzoda, Rustam Sharipov or Madina Nazarova.",
+     "url": "https://screening.example.com/results/c2608"
+    },
+    {
+     "id": "m4",
+     "src": "Collin County court records",
+     "kind": "Registry",
+     "ago": "Today",
+     "head": "No civil or criminal filings under this name",
+     "date": "Sep 23, 2026 · 11:15 AM",
+     "rel": 0,
+     "sum": "County court index search on the subject name and DOB returned no records.",
+     "url": "https://records.example.com/collin/search"
+    }
+   ],
+   "specifics": "Specifically, the subject sent $2,900.00 and $2,100.00 four minutes apart on 06/29/2026 to the same receiver. The second transfer was available on 06/30/2026 but was not collected until 08/05/2026.",
+   "priorSentence": "We have previously filed one or more SARs on Subject Farrukh Nazarov: internal report number 56731894, dated 12/09/2025, aggregate amount $15,750.00, for the apparent structuring of transactions to avoid ID collection.",
+   "relAlert": "3 recipients were identified in Relationships and pre-loaded below.",
+   "nb": {
+    "reportType": "SAR",
+    "alert": "16.12500 · Structuring 3K",
+    "typology": "Structuring",
+    "start": "June 29, 2026",
+    "end": "August 5, 2026",
+    "currency": "USD",
+    "scope": "intl",
+    "name": "Farrukh Nazarov",
+    "gid": "1000000000304719285",
+    "since": "March 14, 2024",
+    "dob": "September 12, 1985",
+    "nationality": "Tajikistan",
+    "employer": "",
+    "risk": "Medium",
+    "total": "$5,700.00",
+    "txns": "5",
+    "threshold": "3000",
+    "accounts": "no",
+    "locations": "yes",
+    "aware": "yes",
+    "cp": "Dilshod Karimzoda",
+    "cpCountry": "Tajikistan",
+    "rel": "family",
+    "multi": "yes",
+    "biz": "no",
+    "third": "no",
+    "priorSar": "yes",
+    "law": "no",
+    "decision": "SAR"
+   },
+   "riskSuggest": "Medium",
+   "stats": {
+    "txns": 5,
+    "total": 5700
+   },
+   "flags": [
+    {
+     "id": "STR3K",
+     "kind": "likely",
+     "evidence": [
+      "7795264018",
+      "8101880246"
+     ],
+     "why": "2 transfers, $2,900 + $2,100 = $5,000, sent 4 minutes apart to the same receiver. Each is under $3,000 and only a primary ID was provided."
+    },
+    {
+     "id": "MC",
+     "kind": "likely",
+     "evidence": [
+      "7795264018",
+      "8827615612",
+      "6558605871"
+     ],
+     "why": "One sender paid 3 different receivers in Tajikistan."
+    },
+    {
+     "id": "PAYOUT",
+     "kind": "likely",
+     "evidence": [
+      "7795264018",
+      "8101880246"
+     ],
+     "why": "Both transfers were available on 06/30/2026. One was picked up that day; the other waited until 08/05/2026."
+    },
+    {
+     "id": "PREV",
+     "kind": "history",
+     "evidence": [],
+     "why": "SAR 56731894 was filed on this sender on 12/09/2025. See Related Cases."
+    }
+   ],
+   "autofile": [
+    {
+     "id": "false",
+     "label": "False data",
+     "result": "pass",
+     "detail": "Sender used 1 ID (Texas driver license). Name, DOB, address and phone match on all 5 transactions."
+    },
+    {
+     "id": "share",
+     "label": "ID sharing",
+     "result": "pass",
+     "detail": "3 receivers, each with a different ID. No ID appears on more than one person."
+    },
+    {
+     "id": "incons",
+     "label": "Inconsistent data",
+     "result": "pass",
+     "detail": "No field has 3 or more values. Rustam Sharipov has 2 address spellings; Dilshod Karimzoda has 2 phones."
+    }
+   ],
+   "screening": [
+    "Interdictions: Clear",
+    "Non PEP",
+    "Sanctions: Clear"
+   ],
+   "metrics": {
+    "countries": [
+     {
+      "cc": "US",
+      "name": "United States",
+      "side": "Send",
+      "age": 41,
+      "tc": 5,
+      "ccount": 1,
+      "amt": 5700,
+      "dr": "1 mo 2 d",
+      "ipc": 15480,
+      "iph": 43585,
+      "pop": 331002651
+     },
+     {
+      "cc": "TJ",
+      "name": "Tajikistan",
+      "side": "Pay",
+      "age": 51,
+      "tc": 5,
+      "ccount": 3,
+      "amt": 5700,
+      "dr": "1 mo 1 wk",
+      "ipc": 713,
+      "iph": 5137,
+      "pop": 9537645
+     }
+    ],
+    "dm": {
+     "inGid": 1,
+     "outGid": 3,
+     "wucom": 3,
+     "agIn": 2,
+     "agOut": 3
+    }
+   }
+  },
+  {
+   "id": "C2608060764519427",
+   "typology": "Many-to-one",
+   "risk": "High",
+   "team": "US Advanced · North America",
+   "analyst": "Adam A.",
+   "created": "2026-08-06",
+   "due": "2026-09-25",
+   "pe": "2026-08-26",
+   "subject": "Zhang Yuting",
+   "subjectRole": "Receiver",
+   "payCountry": "CN",
+   "summary": "Eight senders in six US states sent 18 transfers to one receiver in Dongying, China, with no clear relationship between them. $13,753.30 USD over 10 weeks, including $5,157 from one sender on consecutive days.",
+   "behavior": [
+    "Customer frequently receives ← United States",
+    "Customer never sends funds",
+    "Customer is paid through a bank account and a mobile wallet"
+   ],
+   "facts": {
+    "amount": 13753.3,
+    "txns": 18,
+    "corridors": [
+     "US",
+     "CN"
+    ],
+    "txnId": "8565096719",
+    "products": "WU Money Transfer",
+    "subjects": 9,
+    "agent": "USFL 10000002959648",
+    "path": "8 senders → Zhang Yuting"
+   },
+   "systemFlags": [
+    "Many-to-one",
+    "Structuring 3K",
+    "Multiple Jurisdictions",
+    "High Frequency",
+    "High Value",
+    "Interdictions: Clear",
+    "Non PEP",
+    "Sanctions: Clear"
+   ],
+   "rules": [
+    {
+     "k": "r1",
+     "name": "Many-to-one",
+     "code": "16.304820",
+     "text": "Any 8 or more GIDs in the US sending transactions aggregating to $2,000 or more to 1 GID in 30 days (excluding commercial)."
+    },
+    {
+     "k": "r2",
+     "name": "Structuring 3K",
+     "code": "STR",
+     "text": "Hector Villanueva sent $2,178 and $2,979 about 26 hours apart ($5,157), each under $3,000."
+    },
+    {
+     "k": "r3",
+     "name": "Multiple Jurisdictions",
+     "code": "MJ",
+     "text": "Senders in NV, CA, TX, FL, UT and PA paid the same receiver."
+    },
+    {
+     "k": "r4",
+     "name": "High Frequency 12+",
+     "code": "HF",
+     "text": "12 transfers received between 07/10/2026 and 08/07/2026."
+    },
+    {
+     "k": "r5",
+     "name": "High Value $10K–$14,999",
+     "code": "HV",
+     "text": "$11,203 received in the 30 days ending 08/10/2026."
+    }
+   ],
+   "related": [],
+   "primary": {
+    "name": "Zhang Yuting",
+    "gid": "3000000000384147799",
+    "dob": "1998-07-13",
+    "since": "2026-07-10",
+    "globalRisk": "High",
+    "umn": "Not enrolled",
+    "occupation": "Artist",
+    "phone": "+86 155 5466 9909",
+    "email": "Not provided",
+    "address": "No. 46 Xiliuzhuang Village, Dongying, Shandong 257000",
+    "gidWarn": "Two profiles: bank payouts (with ID and DOB) and mobile-wallet payouts (no ID).",
+    "addressWarn": "4 spellings on file describing 2 addresses. 3 distinct addresses are needed to call inconsistent data.",
+    "ids": [
+     {
+      "type": "National ID",
+      "no": "370522199807132020",
+      "iss": "CN"
+     }
+    ],
+    "phones": [
+     "+86 155 5466 9909"
+    ],
+    "addrs": [
+     "No. 46 Xiliuzhuang Village, Dongying, Shandong 257000",
+     "NO 46 XILIUZHUANG VILLAGE",
+     "46 XILIUZHUANGCUN",
+     "jinxianyanwozhenxiliuzhuangcun46hao, Dongyingshi 250000"
+    ]
+   },
+   "others": [
+    {
+     "id": "o1",
+     "name": "Hector Villanueva",
+     "gid": "30000000003211488271",
+     "cc": "US",
+     "nat": "US · FL",
+     "risk": "High",
+     "dob": "1989-04-11",
+     "since": "2021-01-01",
+     "umn": "UMN-661042",
+     "occupation": "Warehouse supervisor",
+     "phone": "+1 305 555 0110",
+     "email": "Not provided",
+     "address": "2250 SW 8th St, Miami, FL 33135",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "V415-220-88-137-0",
+       "iss": "US-FL"
+      }
+     ],
+     "phones": [
+      "+1 305 555 0110"
+     ],
+     "addrs": [
+      "2250 SW 8th St, Miami, FL 33135"
+     ]
+    },
+    {
+     "id": "o2",
+     "name": "Luis Salinas",
+     "gid": "30000000003221488271",
+     "cc": "US",
+     "nat": "US · TX",
+     "risk": "Medium",
+     "dob": "1991-02-03",
+     "since": "2022-02-02",
+     "umn": "UMN-661049",
+     "occupation": "Unknown",
+     "phone": "+1 956 555 0111",
+     "email": "Not provided",
+     "address": "1419 Iturbide St, Laredo, TX 78040",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "38817264",
+       "iss": "US-TX"
+      }
+     ],
+     "phones": [
+      "+1 956 555 0111"
+     ],
+     "addrs": [
+      "1419 Iturbide St, Laredo, TX 78040"
+     ]
+    },
+    {
+     "id": "o3",
+     "name": "Marco Ibarra",
+     "gid": "30000000003231488271",
+     "cc": "US",
+     "nat": "US · PA",
+     "risk": "Low",
+     "dob": "2005-01-22",
+     "since": "2023-03-03",
+     "umn": "UMN-661056",
+     "occupation": "Student",
+     "phone": "+1 610 555 0112",
+     "email": "Not provided",
+     "address": "815 Hamilton St, Allentown, PA 18101",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "29 384 117",
+       "iss": "US-PA"
+      }
+     ],
+     "phones": [
+      "+1 610 555 0112"
+     ],
+     "addrs": [
+      "815 Hamilton St, Allentown, PA 18101"
+     ]
+    },
+    {
+     "id": "o4",
+     "name": "Brianna Cole",
+     "gid": "30000000003241488271",
+     "cc": "US",
+     "nat": "US · UT",
+     "risk": "Low",
+     "dob": "1985-06-14",
+     "since": "2024-04-04",
+     "umn": "Not enrolled",
+     "occupation": "Nurse",
+     "phone": "+1 801 555 0113",
+     "email": "Not provided",
+     "address": "2475 Washington Blvd, Ogden, UT 84401",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "164882039",
+       "iss": "US-UT"
+      }
+     ],
+     "phones": [
+      "+1 801 555 0113"
+     ],
+     "addrs": [
+      "2475 Washington Blvd, Ogden, UT 84401"
+     ]
+    },
+    {
+     "id": "o5",
+     "name": "Karen Doyle",
+     "gid": "30000000003251488271",
+     "cc": "US",
+     "nat": "US · FL",
+     "risk": "Low",
+     "dob": "1971-12-05",
+     "since": "2025-05-05",
+     "umn": "Not enrolled",
+     "occupation": "Unknown",
+     "phone": "+1 813 555 0114",
+     "email": "Not provided",
+     "address": "3302 W Bay Dr, Tampa, FL 33606",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "D400-617-71-512-0",
+       "iss": "US-FL"
+      }
+     ],
+     "phones": [
+      "+1 813 555 0114"
+     ],
+     "addrs": [
+      "3302 W Bay Dr, Tampa, FL 33606"
+     ]
+    },
+    {
+     "id": "o6",
+     "name": "Bianca Moreira da Silva",
+     "gid": "30000000003261488271",
+     "cc": "US",
+     "nat": "US · NV",
+     "risk": "Low",
+     "dob": "1993-08-19",
+     "since": "2021-06-06",
+     "umn": "Not enrolled",
+     "occupation": "Unknown",
+     "phone": "+1 702 555 0115",
+     "email": "Not provided",
+     "address": "540 Water St, Henderson, NV 89015",
+     "ids": [
+      {
+       "type": "Passport",
+       "no": "FX482211",
+       "iss": "BR"
+      }
+     ],
+     "phones": [
+      "+1 702 555 0115"
+     ],
+     "addrs": [
+      "540 Water St, Henderson, NV 89015"
+     ]
+    },
+    {
+     "id": "o7",
+     "name": "Paulo Teixeira",
+     "gid": "30000000003271488271",
+     "cc": "US",
+     "nat": "US · NV",
+     "risk": "Low",
+     "dob": "1970-03-28",
+     "since": "2022-07-07",
+     "umn": "Not enrolled",
+     "occupation": "Retired",
+     "phone": "+1 702 555 0116",
+     "email": "Not provided",
+     "address": "1100 Fremont St, Las Vegas, NV 89101",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "1702886431",
+       "iss": "US-NV"
+      }
+     ],
+     "phones": [
+      "+1 702 555 0116"
+     ],
+     "addrs": [
+      "1100 Fremont St, Las Vegas, NV 89101"
+     ]
+    },
+    {
+     "id": "o8",
+     "name": "Daniel Ortega Ruiz",
+     "gid": "30000000003281488271",
+     "cc": "US",
+     "nat": "US · CA",
+     "risk": "Low",
+     "dob": "2008-02-17",
+     "since": "2023-08-08",
+     "umn": "Not enrolled",
+     "occupation": "Unknown",
+     "phone": "+1 559 555 0117",
+     "email": "Not provided",
+     "address": "1600 Van Ness Ave, Fresno, CA 93721",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "Y4820573",
+       "iss": "US-CA"
+      }
+     ],
+     "phones": [
+      "+1 559 555 0117"
+     ],
+     "addrs": [
+      "1600 Van Ness Ave, Fresno, CA 93721"
+     ]
+    }
+   ],
+   "kycLinks": [],
+   "txns": [
+    {
+     "key": "0285010280",
+     "mtcn": "0285010280",
+     "amt": 291,
+     "sender": "Bianca Moreira da Silva",
+     "sState": "NV",
+     "sLoc": "Albertsons #3205 · Henderson NV",
+     "sent": "2026-07-10 14:07:03",
+     "receiver": "Zhang Yuting",
+     "pLoc": "SPD Bank · Shenzhen",
+     "pNet": "CNE05",
+     "paid": "2026-07-10 20:40",
+     "fee": 14,
+     "lcl": 291,
+     "cur": "USD",
+     "prod": "Retail",
+     "ch": "Bank",
+     "purpose": "Family support",
+     "status": "Paid",
+     "sId": "Passport FX482211 (BR)",
+     "sDob": "1993-08-19",
+     "sAddr": "540 Water St, Henderson, NV 89015",
+     "sPhone": "+1 702 555 0115",
+     "pId": "National ID 370522199807132020 (CN)",
+     "pDob": "1998-07-13",
+     "pAddr": "jinxianyanwozhenxiliuzhuangcun46hao, Dongyingshi 250000",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "7910925077",
+     "mtcn": "7910925077",
+     "amt": 150,
+     "sender": "Bianca Moreira da Silva",
+     "sState": "NV",
+     "sLoc": "Albertsons #3205 · Henderson NV",
+     "sent": "2026-07-13 16:53:29",
+     "receiver": "Zhang Yuting",
+     "pLoc": "SPD Bank · Shenzhen",
+     "pNet": "CNE05",
+     "paid": "2026-07-13 20:19",
+     "fee": 14,
+     "lcl": 150,
+     "cur": "USD",
+     "prod": "Retail",
+     "ch": "Bank",
+     "purpose": "Family support",
+     "status": "Paid",
+     "sId": "Passport FX482211 (BR)",
+     "sDob": "1993-08-19",
+     "sAddr": "540 Water St, Henderson, NV 89015",
+     "sPhone": "+1 702 555 0115",
+     "pId": "National ID 370522199807132020 (CN)",
+     "pDob": "1998-07-13",
+     "pAddr": "jinxianyanwozhenxiliuzhuangcun46hao, Dongyingshi 250000",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "4479869436",
+     "mtcn": "4479869436",
+     "amt": 120,
+     "sender": "Daniel Ortega Ruiz",
+     "sState": "CA",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-15 02:19:30",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-07-15 02:33",
+     "fee": 1.99,
+     "lcl": 797.47,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license Y4820573 (US-CA)",
+     "sDob": "2008-02-17",
+     "sAddr": "1600 Van Ness Ave, Fresno, CA 93721",
+     "sPhone": "+1 559 555 0117",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "No. 46 Xiliuzhuang Village, Dongying, Shandong 257000",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "6558563891",
+     "mtcn": "6558563891",
+     "amt": 250,
+     "sender": "Luis Salinas",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-07-17 21:18:32",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-07-17 21:39",
+     "fee": 1.99,
+     "lcl": 1663.73,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 38817264 (US-TX)",
+     "sDob": "1991-02-03",
+     "sAddr": "1419 Iturbide St, Laredo, TX 78040",
+     "sPhone": "+1 956 555 0111",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "NO 46 XILIUZHUANG VILLAGE",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "9498364994",
+     "mtcn": "9498364994",
+     "amt": 360,
+     "sender": "Luis Salinas",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-07-24 08:43:11",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-07-24 08:55",
+     "fee": 1.99,
+     "lcl": 2395.62,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 38817264 (US-TX)",
+     "sDob": "1991-02-03",
+     "sAddr": "1419 Iturbide St, Laredo, TX 78040",
+     "sPhone": "+1 956 555 0111",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "46 XILIUZHUANGCUN",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "4984749452",
+     "mtcn": "4984749452",
+     "amt": 446,
+     "sender": "Karen Doyle",
+     "sState": "FL",
+     "sLoc": "WU Digital",
+     "sent": "2026-07-24 20:17:26",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-07-24 21:19",
+     "fee": 1.99,
+     "lcl": 2967.91,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Not stated",
+     "status": "Paid",
+     "sId": "Driver license D400-617-71-512-0 (US-FL)",
+     "sDob": "1971-12-05",
+     "sAddr": "3302 W Bay Dr, Tampa, FL 33606",
+     "sPhone": "+1 813 555 0114",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "8485397013",
+     "mtcn": "8485397013",
+     "amt": 489,
+     "sender": "Brianna Cole",
+     "sState": "UT",
+     "sLoc": "WU Digital",
+     "sent": "2026-07-27 21:31:57",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-07-27 21:56",
+     "fee": 1.99,
+     "lcl": 3249.5,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Not stated",
+     "status": "Paid",
+     "sId": "Driver license 164882039 (US-UT)",
+     "sDob": "1985-06-14",
+     "sAddr": "2475 Washington Blvd, Ogden, UT 84401",
+     "sPhone": "+1 801 555 0113",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "No. 46 Xiliuzhuang Village, Dongying, Shandong 257000",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "3361996891",
+     "mtcn": "3361996891",
+     "amt": 1019,
+     "sender": "Marco Ibarra",
+     "sState": "PA",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-02 14:14:55",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-02 19:01",
+     "fee": 1.99,
+     "lcl": 6751.18,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 29 384 117 (US-PA)",
+     "sDob": "2005-01-22",
+     "sAddr": "815 Hamilton St, Allentown, PA 18101",
+     "sPhone": "+1 610 555 0112",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "NO 46 XILIUZHUANG VILLAGE",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "9270645061",
+     "mtcn": "9270645061",
+     "amt": 2099,
+     "sender": "Hector Villanueva",
+     "sState": "FL",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-04 20:29:04",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-04 20:43",
+     "fee": 64.96,
+     "lcl": 13929.17,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license V415-220-88-137-0 (US-FL)",
+     "sDob": "1989-04-11",
+     "sAddr": "2250 SW 8th St, Miami, FL 33135",
+     "sPhone": "+1 305 555 0110",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "46 XILIUZHUANGCUN",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "7222225426",
+     "mtcn": "7222225426",
+     "amt": 323,
+     "sender": "Paulo Teixeira",
+     "sState": "NV",
+     "sLoc": "Agent · Las Vegas NV",
+     "sent": "2026-08-05 13:23:31",
+     "receiver": "Zhang Yuting",
+     "pLoc": "SPD Bank · Shenzhen",
+     "pNet": "CNE05",
+     "paid": "2026-08-05 21:16",
+     "fee": 7.5,
+     "lcl": 323,
+     "cur": "USD",
+     "prod": "Retail",
+     "ch": "Bank",
+     "purpose": "Family support",
+     "status": "Paid",
+     "sId": "Driver license 1702886431 (US-NV)",
+     "sDob": "1970-03-28",
+     "sAddr": "1100 Fremont St, Las Vegas, NV 89101",
+     "sPhone": "+1 702 555 0116",
+     "pId": "National ID 370522199807132020 (CN)",
+     "pDob": "1998-07-13",
+     "pAddr": "jinxianyanwozhenxiliuzhuangcun46hao, Dongyingshi 250000",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "1490387411",
+     "mtcn": "1490387411",
+     "amt": 500,
+     "sender": "Luis Salinas",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-07 01:17:15",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-07 01:29",
+     "fee": 1.99,
+     "lcl": 3313,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 38817264 (US-TX)",
+     "sDob": "1991-02-03",
+     "sAddr": "1419 Iturbide St, Laredo, TX 78040",
+     "sPhone": "+1 956 555 0111",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "7402206768",
+     "mtcn": "7402206768",
+     "amt": 180,
+     "sender": "Luis Salinas",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-07 23:38:28",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-07 23:53",
+     "fee": 1.99,
+     "lcl": 1192.68,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 38817264 (US-TX)",
+     "sDob": "1991-02-03",
+     "sAddr": "1419 Iturbide St, Laredo, TX 78040",
+     "sPhone": "+1 956 555 0111",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "No. 46 Xiliuzhuang Village, Dongying, Shandong 257000",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "8589389061",
+     "mtcn": "8589389061",
+     "amt": 110,
+     "sender": "Luis Salinas",
+     "sState": "TX",
+     "sLoc": "WU Digital · Laredo TX",
+     "sent": "2026-08-08 02:50:58",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-08 03:04",
+     "fee": 0,
+     "lcl": 728.86,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Not stated",
+     "status": "Paid",
+     "sId": "Driver license 38817264 (US-TX)",
+     "sDob": "1991-02-03",
+     "sAddr": "1419 Iturbide St, Laredo, TX 78040",
+     "sPhone": "+1 956 555 0111",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "NO 46 XILIUZHUANG VILLAGE",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "8552243826",
+     "mtcn": "8552243826",
+     "amt": 2178,
+     "sender": "Hector Villanueva",
+     "sState": "FL",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-09 20:41:26",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-09 20:56",
+     "fee": 67.33,
+     "lcl": 14431.43,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Flagged",
+     "sId": "Driver license V415-220-88-137-0 (US-FL)",
+     "sDob": "1989-04-11",
+     "sAddr": "2250 SW 8th St, Miami, FL 33135",
+     "sPhone": "+1 305 555 0110",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "46 XILIUZHUANGCUN",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "8565096719",
+     "mtcn": "8565096719",
+     "amt": 2979,
+     "sender": "Hector Villanueva",
+     "sState": "FL",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-10 23:01:27",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-10 23:15",
+     "fee": 91.36,
+     "lcl": 19732.9,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Flagged",
+     "sId": "Driver license V415-220-88-137-0 (US-FL)",
+     "sDob": "1989-04-11",
+     "sAddr": "2250 SW 8th St, Miami, FL 33135",
+     "sPhone": "+1 305 555 0110",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "2959814711",
+     "mtcn": "2959814711",
+     "amt": 370,
+     "sender": "Luis Salinas",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-29 00:52:26",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-08-29 01:05",
+     "fee": 1.99,
+     "lcl": 2441.78,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 38817264 (US-TX)",
+     "sDob": "1991-02-03",
+     "sAddr": "1419 Iturbide St, Laredo, TX 78040",
+     "sPhone": "+1 956 555 0111",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "No. 46 Xiliuzhuang Village, Dongying, Shandong 257000",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "3690357716",
+     "mtcn": "3690357716",
+     "amt": 1109.3,
+     "sender": "Marco Ibarra",
+     "sState": "PA",
+     "sLoc": "WU Digital",
+     "sent": "2026-09-01 01:08:11",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-09-01 01:19",
+     "fee": 1.99,
+     "lcl": 7320.16,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 29 384 117 (US-PA)",
+     "sDob": "2005-01-22",
+     "sAddr": "815 Hamilton St, Allentown, PA 18101",
+     "sPhone": "+1 610 555 0112",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "NO 46 XILIUZHUANG VILLAGE",
+     "pPhone": "+86 155 5466 9909"
+    },
+    {
+     "key": "3550662131",
+     "mtcn": "3550662131",
+     "amt": 780,
+     "sender": "Luis Salinas",
+     "sState": "TX",
+     "sLoc": "WU Digital",
+     "sent": "2026-09-19 00:53:20",
+     "receiver": "Zhang Yuting",
+     "pLoc": "Mobile wallet",
+     "pNet": "CNL56",
+     "paid": "2026-09-19 01:06",
+     "fee": 1.99,
+     "lcl": 5129.28,
+     "cur": "CNY",
+     "prod": "Digital",
+     "ch": "Wallet",
+     "purpose": "Salary / reimbursement",
+     "status": "Paid",
+     "sId": "Driver license 38817264 (US-TX)",
+     "sDob": "1991-02-03",
+     "sAddr": "1419 Iturbide St, Laredo, TX 78040",
+     "sPhone": "+1 956 555 0111",
+     "pId": "",
+     "pDob": "",
+     "pAddr": "46 XILIUZHUANGCUN",
+     "pPhone": "+86 155 5466 9909"
+    }
+   ],
+   "attachments": [
+    {
+     "id": "a1",
+     "name": "Transaction Records",
+     "file": "Transaction_Records_Export_C2608_427.pdf",
+     "cat": "Financial Records",
+     "kind": "pdf",
+     "desc": "18 transactions from 8 senders, exported from the core system.",
+     "size": "2.4 MB",
+     "pages": 9,
+     "uploaded": "Aug 6, 2026 · 02:12",
+     "by": "System",
+     "ev": true
+    },
+    {
+     "id": "a2",
+     "name": "Customer Profile",
+     "file": "KYC_Profile_Zhang_Bank.png",
+     "cat": "KYC",
+     "kind": "image",
+     "desc": "Bank-payout KYC for the receiver: national ID 370522199807132020, DOB 07/13/1998.",
+     "size": "520 KB",
+     "uploaded": "Aug 6, 2026 · 02:12",
+     "by": "System",
+     "ev": true
+    },
+    {
+     "id": "a3",
+     "name": "Pay Channel Breakdown",
+     "file": "Payouts_Bank_vs_Wallet.xlsx",
+     "cat": "Financial Records",
+     "kind": "xlsx",
+     "desc": "3 bank payouts with ID and 15 mobile-wallet payouts without ID, same phone number.",
+     "size": "88 KB",
+     "uploaded": "Sep 23, 2026 · 11:31",
+     "by": "Adam A.",
+     "ev": true
+    }
+   ],
+   "log": [
+    {
+     "id": "l1",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:38:02 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Receiver is paid through a bank (with ID) and a mobile wallet (no ID). The 4 address spellings describe 2 real addresses, so inconsistent data is not called."
+    },
+    {
+     "id": "l2",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:34:47 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Hector Villanueva sent $2,178 and $2,979 on consecutive days ($5,157), each under $3,000."
+    },
+    {
+     "id": "l3",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:32:10 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Splitting on 07/24–07/27 is not supported: different senders, amounts and states."
+    },
+    {
+     "id": "l4",
+     "type": "Review",
+     "ts": "2026-09-23 11:28:55 AM",
+     "who": "Adam A.",
+     "text": "Adam A. opened case."
+    },
+    {
+     "id": "l5",
+     "type": "Transaction",
+     "ts": "2026-08-11 02:11:03 AM",
+     "text": "Flagged transaction 8565096719: $2,979 received from Hector Villanueva via mobile wallet."
+    },
+    {
+     "id": "l6",
+     "type": "Transaction",
+     "ts": "2026-08-11 02:11:03 AM",
+     "text": "Flagged transaction 8552243826: $2,178 received from Hector Villanueva via mobile wallet."
+    },
+    {
+     "id": "l7",
+     "type": "Assignment",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Case assigned to analyst Adam A. (US Advanced)."
+    },
+    {
+     "id": "l8",
+     "type": "Case Created",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Case auto-generated by rule 16.304820 (8+ US senders to 1 receiver) and routed to US Advanced, Auto Tier 2."
+    }
+   ],
+   "media": [
+    {
+     "id": "m1",
+     "src": "Shandong Evening Post",
+     "kind": "News",
+     "ago": "1 hour ago",
+     "head": "Dongying craft cooperative expands online art sales to overseas buyers",
+     "date": "Sep 23, 2026 · 10:25 AM",
+     "rel": 48,
+     "sum": "Profile of a village art cooperative in Dongying selling illustrations to US and EU buyers through social platforms. A member named Zhang is quoted; not confirmed as the subject.",
+     "url": "https://news.example.com/shandong/dongying-art-coop"
+    },
+    {
+     "id": "m2",
+     "src": "@zhangyuting_art",
+     "kind": "Social",
+     "ago": "6 hours ago",
+     "head": "Illustration commissions; accepts payments from overseas clients",
+     "date": "Sep 23, 2026 · 05:12 AM",
+     "rel": 72,
+     "sum": "Public artist account from Dongying offering portrait commissions to US clients and asking for payment by money transfer. Fits the stated occupation and the many unrelated senders.",
+     "url": "https://social.example.com/zhangyuting_art"
+    },
+    {
+     "id": "m3",
+     "src": "Sanctions & watchlists",
+     "kind": "Registry",
+     "ago": "Today",
+     "head": "No match for the receiver or 8 senders",
+     "date": "Sep 23, 2026 · 11:40 AM",
+     "rel": 0,
+     "sum": "Screened against OFAC SDN, consolidated lists and PEP databases. No matches.",
+     "url": "https://screening.example.com/results/c2608-427"
+    },
+    {
+     "id": "m4",
+     "src": "US customs seizure notices",
+     "kind": "Registry",
+     "ago": "Today",
+     "head": "No seizures linked to the receiver name or address",
+     "date": "Sep 23, 2026 · 11:40 AM",
+     "rel": 0,
+     "sum": "No counterfeit-goods or controlled-substance seizure notices reference the receiver or her Dongying address.",
+     "url": "https://records.example.com/customs/search"
+    },
+    {
+     "id": "m5",
+     "src": "Consumer fraud complaints",
+     "kind": "Registry",
+     "ago": "Today",
+     "head": "No complaints naming the receiver as payee",
+     "date": "Sep 23, 2026 · 11:40 AM",
+     "rel": 0,
+     "sum": "No fraud complaints from the 8 senders or others naming this receiver.",
+     "url": "https://records.example.com/fraud/search"
+    }
+   ],
+   "specifics": "Specifically, eight unrelated senders in Nevada, California, Texas, Florida, Utah and Pennsylvania sent funds to the same receiver in Dongying, China. One sender, Hector Villanueva, sent $2,178.00 and $2,979.00 on consecutive days ($5,157.00), each below $3,000.00.",
+   "priorSentence": "",
+   "relAlert": "8 senders were identified in Relationships and pre-loaded below. None share an address, phone or ID.",
+   "nb": {
+    "reportType": "SAR",
+    "alert": "16.304820 · Many-to-one",
+    "typology": "Structuring; many-to-one",
+    "start": "July 10, 2026",
+    "end": "September 19, 2026",
+    "currency": "USD",
+    "scope": "intl",
+    "name": "Zhang Yuting",
+    "gid": "3000000000384147799",
+    "since": "July 10, 2026",
+    "dob": "July 13, 1998",
+    "nationality": "China",
+    "employer": "",
+    "risk": "High",
+    "total": "$13,753.30",
+    "txns": "18",
+    "threshold": "3000",
+    "accounts": "yes",
+    "locations": "yes",
+    "aware": "no",
+    "cp": "Hector Villanueva",
+    "cpCountry": "United States",
+    "rel": "none",
+    "multi": "yes",
+    "biz": "no",
+    "third": "no",
+    "priorSar": "no",
+    "law": "no",
+    "decision": "SAR"
+   },
+   "riskSuggest": "Medium",
+   "stats": {
+    "txns": 18,
+    "total": 13753.3
+   },
+   "flags": [
+    {
+     "id": "STR3K",
+     "kind": "likely",
+     "evidence": [
+      "8552243826",
+      "8565096719"
+     ],
+     "why": "Hector Villanueva sent $2,178 and $2,979 about 26 hours apart ($5,157), each under $3,000."
+    },
+    {
+     "id": "MC",
+     "kind": "likely",
+     "evidence": [],
+     "why": "8 unrelated senders paid the same receiver."
+    },
+    {
+     "id": "MJ",
+     "kind": "likely",
+     "evidence": [
+      "0285010280",
+      "4479869436",
+      "6558563891",
+      "4984749452",
+      "8485397013",
+      "3361996891"
+     ],
+     "why": "Senders in NV, CA, TX, FL, UT and PA paid the same receiver."
+    },
+    {
+     "id": "HF",
+     "kind": "likely",
+     "evidence": [],
+     "why": "12 transfers received between 07/10/2026 and 08/07/2026."
+    },
+    {
+     "id": "HV",
+     "kind": "likely",
+     "evidence": [],
+     "why": "$11,203 received in the 30 days ending 08/10/2026."
+    },
+    {
+     "id": "SPLIT",
+     "kind": "potential",
+     "evidence": [
+      "9498364994",
+      "4984749452",
+      "8485397013"
+     ],
+     "why": "3 transfers on 07/24–07/27 from different senders ($1,295). Different senders, amounts and states."
+    },
+    {
+     "id": "SWB",
+     "kind": "potential",
+     "evidence": [
+      "8589389061"
+     ],
+     "why": "One transfer sent from Laredo, TX, a Southwest-border city of concern. The receiver is not in the border region."
+    }
+   ],
+   "autofile": [
+    {
+     "id": "false",
+     "label": "False data",
+     "result": "pass",
+     "detail": "The receiver ID appears only on the 3 bank payouts and is the same each time. Wallet payouts carry no ID."
+    },
+    {
+     "id": "share",
+     "label": "ID sharing",
+     "result": "pass",
+     "detail": "None of the 8 senders share an ID, address or phone."
+    },
+    {
+     "id": "incons",
+     "label": "Inconsistent data",
+     "result": "watch",
+     "detail": "The receiver has 4 address spellings that describe 2 real addresses. 3 distinct addresses are needed to call it."
+    }
+   ],
+   "screening": [
+    "Interdictions: Clear",
+    "Non PEP",
+    "Sanctions: Clear"
+   ],
+   "metrics": {
+    "countries": [
+     {
+      "cc": "US",
+      "name": "United States",
+      "side": "Send",
+      "age": 35.5,
+      "tc": 18,
+      "ccount": 8,
+      "amt": 13753.3,
+      "dr": "2 mo 1 wk 5 d",
+      "ipc": 15480,
+      "iph": 43585,
+      "pop": 331002651
+     },
+     {
+      "cc": "CN",
+      "name": "China",
+      "side": "Pay",
+      "age": 28,
+      "tc": 18,
+      "ccount": 1,
+      "amt": 13753.3,
+      "dr": "2 mo 1 wk 5 d",
+      "ipc": 1786,
+      "iph": 6180,
+      "pop": 1439323776
+     }
+    ],
+    "dm": {
+     "inGid": 8,
+     "outGid": 1,
+     "wucom": 15,
+     "agIn": 6,
+     "agOut": 2
+    }
+   }
+  },
+  {
+   "id": "C2608060764519583",
+   "typology": "Child exploitation rule",
+   "risk": "High",
+   "team": "US Advanced · North America",
+   "analyst": "Adam A.",
+   "created": "2026-08-06",
+   "due": "2026-09-25",
+   "pe": "2026-08-26",
+   "subject": "Maricel Joy Dizon",
+   "subjectRole": "Receiver",
+   "payCountry": "PH",
+   "summary": "A 51-year-old retired US sender made 31 mostly small transfers to a 33-year-old unemployed receiver in Rizal, Philippines. 9 transfers of $180 or less in 30 days triggered the child exploitation rule, which always requires an investigation.",
+   "behavior": [
+    "Customer frequently receives ← United States",
+    "Customer rarely receives ← Japan, Netherlands (in KYC history)",
+    "All 31 transfers were sent online (Apple Pay and WU Digital)"
+   ],
+   "facts": {
+    "amount": 8602,
+    "txns": 31,
+    "corridors": [
+     "US",
+     "PH"
+    ],
+    "txnId": "3000000005",
+    "products": "WU Money Transfer",
+    "subjects": 2,
+    "agent": "USAP 10000002559940",
+    "path": "Ernesto Villamor → Maricel Joy Dizon"
+   },
+   "systemFlags": [
+    "Child Exploitation BR",
+    "High Frequency",
+    "Multiple Agents",
+    "Multiple Mobiles",
+    "KYC Approved",
+    "Interdictions: Clear",
+    "Non PEP",
+    "Sanctions: Clear"
+   ],
+   "rules": [
+    {
+     "k": "r1",
+     "name": "Child Exploitation BR",
+     "code": "16.304818",
+     "text": "Any 1 or more US GIDs sending 9 or more transactions each at or below $180 to 1 GID in PH, ID or TH in 30 days (excluding commercial and last-name matches). Here: 9 transfers from 07/08 to 08/05/2026."
+    },
+    {
+     "k": "r2",
+     "name": "High Frequency 12+",
+     "code": "HF",
+     "text": "12 transfers between 07/08/2026 and 08/06/2026."
+    },
+    {
+     "k": "r3",
+     "name": "Multiple Agents",
+     "code": "MA",
+     "text": "Paid at 4 pay locations: 2 agents, a bank deposit and a second agent network."
+    },
+    {
+     "k": "r4",
+     "name": "Multiple Mobiles",
+     "code": "MM",
+     "text": "3 mobile numbers on the receiver profile."
+    }
+   ],
+   "related": [
+    {
+     "id": "R251230760906904",
+     "date": "2025-12-30",
+     "text": "KYC ECDD Philippines. Same main sender and purpose. Approved without outreach.",
+     "status": "Closed",
+     "outcome": "Approved",
+     "kyc": true,
+     "detail": {
+      "team": "KYC ECDD Philippines",
+      "analyst": "R. Delacruz",
+      "notes": [
+       "Decision: new case, approved. The customer mainly receives from the same primary family member for the same purpose.",
+       "The sender supports his daughter, who lives with and is cared for by the customer.",
+       "No new major counterparties; no change in corridors or purpose. Volume increase is not significant.",
+       "Related KYC cases R19082663187707 and R23053196230447 previously approved. No STR/SAR referral. Outreach needed: no."
+      ],
+      "docs": [
+       "Photo ID (front) · Accepted",
+       "Birth certificate, minor dependent · Accepted",
+       "Proof of address · Not accepted"
+      ]
+     }
+    },
+    {
+     "id": "R23053196230447",
+     "date": "2025-02-20",
+     "text": "KYC ECDD Philippines. December 2024 volume ($7,595) explained as holiday season.",
+     "status": "Closed",
+     "outcome": "Approved",
+     "detail": {
+      "team": "KYC ECDD Philippines",
+      "analyst": "W. Musa",
+      "notes": [
+       "Approval without outreach. Interdiction and STR/SAR screening: no results.",
+       "December 2024 volume ($7,595) is higher but consistent with the holiday season. Case remains approved."
+      ]
+     }
+    },
+    {
+     "id": "C2603100119752124",
+     "date": "2026-04-16",
+     "text": "Philippines team review of the same receiver. Closed without filing.",
+     "status": "Closed",
+     "outcome": "No SAR",
+     "detail": {
+      "team": "Philippines",
+      "analyst": "J. Santos",
+      "notes": [
+       "Reviewed under local threshold rules. Activity consistent with the approved KYC profile."
+      ]
+     }
+    }
+   ],
+   "primary": {
+    "name": "Maricel Joy Dizon",
+    "gid": "1000000000115935103",
+    "dob": "1992-11-20",
+    "since": "2018-10-01",
+    "globalRisk": "Low",
+    "umn": "UMN-2290417",
+    "occupation": "Unemployed",
+    "phone": "+63 900 000 0001",
+    "email": "Not provided",
+    "address": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+    "gidWarn": "3 mobile numbers and 2 ID documents (PhilSys and passport) on file, same name and DOB.",
+    "ids": [
+     {
+      "type": "PhilSys",
+      "no": "PSN-0000-0000-DEMO",
+      "iss": "PH"
+     },
+     {
+      "type": "Passport",
+      "no": "P0000000D",
+      "iss": "PH"
+     }
+    ],
+    "phones": [
+     "+63 900 000 0001",
+     "+63 900 000 0002",
+     "+63 900 000 0003"
+    ],
+    "addrs": [
+     "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "100 SAMPLE ST DEMO VILLAGE CAINTA",
+     "100 Sample Street, Brgy. Demo, Cainta",
+     "#100 Sample St., Demo Vill., Cainta Rizal",
+     "100 Sample St Cainta 1900"
+    ],
+    "addressWarn": "5 address records; all are the same Cainta address typed differently."
+   },
+   "others": [
+    {
+     "id": "o1",
+     "name": "Ernesto Villamor",
+     "gid": "3000000000299184410",
+     "cc": "US",
+     "nat": "US · CO",
+     "risk": "Low",
+     "dob": "1975-03-04",
+     "since": "2018-09-22",
+     "umn": "UMN-1187730",
+     "occupation": "Retired",
+     "phone": "+1 720 555 0100",
+     "email": "e.villamor@example.com",
+     "address": "200 Example Ave, Denver, CO 80237",
+     "ids": [
+      {
+       "type": "Driver license",
+       "no": "000-000-001 (sample)",
+       "iss": "US-CO"
+      }
+     ],
+     "phones": [
+      "+1 720 555 0100"
+     ],
+     "addrs": [
+      "200 Example Ave, Denver, CO 80237"
+     ]
+    }
+   ],
+   "kycLinks": [
+    {
+     "name": "Evangeline Dizon",
+     "note": "Sender in KYC history (Japan)"
+    },
+    {
+     "name": "Rob Koster",
+     "note": "Sender in KYC history (Netherlands)"
+    }
+   ],
+   "txns": [
+    {
+     "key": "3000000001",
+     "mtcn": "3000000001",
+     "amt": 85,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-06-10 01:15:15",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-06-10 01:27",
+     "fee": 2.99,
+     "lcl": 5086.09,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000002",
+     "mtcn": "3000000002",
+     "amt": 40,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-06-14 00:43:55",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-06-14 01:32",
+     "fee": 2.99,
+     "lcl": 2363.65,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 SAMPLE ST DEMO VILLAGE CAINTA",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000003",
+     "mtcn": "3000000003",
+     "amt": 32,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-06-15 04:22:06",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "CLH Cainta · Rizal",
+     "pNet": "PHQ86",
+     "paid": "2026-06-15 05:48",
+     "fee": 2.99,
+     "lcl": 1880.84,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample Street, Brgy. Demo, Cainta",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000004",
+     "mtcn": "3000000004",
+     "amt": 2250,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "WU Digital",
+     "sent": "2026-06-30 01:24:43",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-06-30 03:27",
+     "fee": 33.75,
+     "lcl": 2250,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Education / school fees",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "#100 Sample St., Demo Vill., Cainta Rizal",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000005",
+     "mtcn": "3000000005",
+     "amt": 180,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-08 02:10:22",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-07-08 04:50",
+     "fee": 4.99,
+     "lcl": 10778.49,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St Cainta 1900",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000006",
+     "mtcn": "3000000006",
+     "amt": 80,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-09 23:43:49",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-07-10 03:00",
+     "fee": 2.99,
+     "lcl": 80,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000007",
+     "mtcn": "3000000007",
+     "amt": 80,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-12 23:39:55",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-07-12 23:53",
+     "fee": 2.99,
+     "lcl": 4787.95,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 SAMPLE ST DEMO VILLAGE CAINTA",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000008",
+     "mtcn": "3000000008",
+     "amt": 45,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-13 05:51:57",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-07-13 06:42",
+     "fee": 2.99,
+     "lcl": 45,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample Street, Brgy. Demo, Cainta",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000009",
+     "mtcn": "3000000009",
+     "amt": 295,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-15 02:59:44",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-07-15 04:27",
+     "fee": 5.99,
+     "lcl": 295,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "#100 Sample St., Demo Vill., Cainta Rizal",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000010",
+     "mtcn": "3000000010",
+     "amt": 55,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-20 03:27:40",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-07-20 05:32",
+     "fee": 2.99,
+     "lcl": 3297.89,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St Cainta 1900",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000011",
+     "mtcn": "3000000011",
+     "amt": 100,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-22 15:20:27",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-07-22 18:02",
+     "fee": 2.99,
+     "lcl": 6001.03,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000012",
+     "mtcn": "3000000012",
+     "amt": 50,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-07-27 05:31:12",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-07-27 08:50",
+     "fee": 2.99,
+     "lcl": 2997.84,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 SAMPLE ST DEMO VILLAGE CAINTA",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000013",
+     "mtcn": "3000000013",
+     "amt": 1810,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "WU Digital",
+     "sent": "2026-07-30 21:05:27",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-07-30 21:21",
+     "fee": 27.15,
+     "lcl": 1810,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Education / school fees",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample Street, Brgy. Demo, Cainta",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000014",
+     "mtcn": "3000000014",
+     "amt": 60,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-02 21:48:52",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "CLH Cainta · Rizal",
+     "pNet": "PHQ86",
+     "paid": "2026-08-02 22:41",
+     "fee": 2.99,
+     "lcl": 3558.8,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "#100 Sample St., Demo Vill., Cainta Rizal",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000015",
+     "mtcn": "3000000015",
+     "amt": 110,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-04 21:30:45",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-08-04 23:00",
+     "fee": 4.99,
+     "lcl": 6496.56,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Flagged",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St Cainta 1900",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000016",
+     "mtcn": "3000000016",
+     "amt": 80,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-06 03:33:48",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-08-06 05:40",
+     "fee": 2.99,
+     "lcl": 4729.01,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000017",
+     "mtcn": "3000000017",
+     "amt": 20,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-09 05:23:43",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-08-09 08:07",
+     "fee": 2.99,
+     "lcl": 1184.96,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 SAMPLE ST DEMO VILLAGE CAINTA",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000018",
+     "mtcn": "3000000018",
+     "amt": 55,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-13 00:33:14",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-08-13 03:54",
+     "fee": 2.99,
+     "lcl": 55,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample Street, Brgy. Demo, Cainta",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000019",
+     "mtcn": "3000000019",
+     "amt": 40,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-13 21:56:31",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Agent · Pasig",
+     "pNet": "PH988",
+     "paid": "2026-08-13 22:14",
+     "fee": 2.99,
+     "lcl": 2389.37,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "#100 Sample St., Demo Vill., Cainta Rizal",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000020",
+     "mtcn": "3000000020",
+     "amt": 55,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-15 22:35:37",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-08-15 23:30",
+     "fee": 2.99,
+     "lcl": 55,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St Cainta 1900",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000021",
+     "mtcn": "3000000021",
+     "amt": 105,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-19 21:39:34",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-08-19 23:11",
+     "fee": 4.99,
+     "lcl": 6289.49,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000022",
+     "mtcn": "3000000022",
+     "amt": 1200,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-21 18:02:10",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-08-21 20:11",
+     "fee": 18,
+     "lcl": 1200,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Education / school fees",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 SAMPLE ST DEMO VILLAGE CAINTA",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000023",
+     "mtcn": "3000000023",
+     "amt": 20,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-24 07:41:02",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-08-24 10:27",
+     "fee": 2.99,
+     "lcl": 1199.64,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample Street, Brgy. Demo, Cainta",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000024",
+     "mtcn": "3000000024",
+     "amt": 900,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "WU Digital",
+     "sent": "2026-08-27 16:25:48",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-08-27 19:48",
+     "fee": 13.5,
+     "lcl": 900,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Education / school fees",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "#100 Sample St., Demo Vill., Cainta Rizal",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000025",
+     "mtcn": "3000000025",
+     "amt": 40,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-08-29 01:12:30",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-08-29 01:32",
+     "fee": 2.99,
+     "lcl": 2420.78,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St Cainta 1900",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000026",
+     "mtcn": "3000000026",
+     "amt": 55,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-09-02 00:20:14",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-09-02 01:17",
+     "fee": 2.99,
+     "lcl": 3345.26,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000027",
+     "mtcn": "3000000027",
+     "amt": 110,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-09-05 07:48:09",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-09-05 09:22",
+     "fee": 4.99,
+     "lcl": 6699.07,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 SAMPLE ST DEMO VILLAGE CAINTA",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000028",
+     "mtcn": "3000000028",
+     "amt": 395,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-09-10 22:06:51",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Bank deposit",
+     "pNet": "PHX74",
+     "paid": "2026-09-11 00:17",
+     "fee": 5.99,
+     "lcl": 395,
+     "cur": "USD",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample Street, Brgy. Demo, Cainta",
+     "pPhone": "+63 900 000 0001"
+    },
+    {
+     "key": "3000000029",
+     "mtcn": "3000000029",
+     "amt": 150,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-09-14 19:33:27",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-09-14 22:21",
+     "fee": 2.99,
+     "lcl": 9112.5,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "#100 Sample St., Demo Vill., Cainta Rizal",
+     "pPhone": "+63 900 000 0002"
+    },
+    {
+     "key": "3000000030",
+     "mtcn": "3000000030",
+     "amt": 35,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-09-18 08:40:16",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-09-18 12:05",
+     "fee": 2.99,
+     "lcl": 2135.43,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "Passport P0000000D (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St Cainta 1900",
+     "pPhone": "+63 900 000 0003"
+    },
+    {
+     "key": "3000000031",
+     "mtcn": "3000000031",
+     "amt": 70,
+     "sender": "Ernesto Villamor",
+     "sState": "CO",
+     "sLoc": "Apple Pay",
+     "sent": "2026-09-20 01:14:38",
+     "receiver": "Maricel Joy Dizon",
+     "pLoc": "Universal Storefront · Quezon City",
+     "pNet": "PH647",
+     "paid": "2026-09-20 01:36",
+     "fee": 2.99,
+     "lcl": 4270.87,
+     "cur": "PHP",
+     "prod": "Digital",
+     "status": "Paid",
+     "purpose": "Family support",
+     "sId": "Driver license 000-000-001 (sample) (US-CO)",
+     "sDob": "1975-03-04",
+     "sAddr": "200 Example Ave, Denver, CO 80237",
+     "sPhone": "+1 720 555 0100",
+     "pId": "PhilSys PSN-0000-0000-DEMO (PH)",
+     "pDob": "1992-11-20",
+     "pAddr": "100 Sample St, Demo Village, Cainta, Rizal 1900",
+     "pPhone": "+63 900 000 0001"
+    }
+   ],
+   "attachments": [
+    {
+     "id": "a1",
+     "name": "Transaction Records",
+     "file": "Transaction_Records_Export_C2608_583.pdf",
+     "cat": "Financial Records",
+     "kind": "pdf",
+     "desc": "31 transactions from one sender, exported from the core system.",
+     "size": "1.9 MB",
+     "pages": 7,
+     "uploaded": "Aug 6, 2026 · 02:12",
+     "by": "System",
+     "ev": true
+    },
+    {
+     "id": "a2",
+     "name": "Customer Profile",
+     "file": "KYC_Profile_Dizon.png",
+     "cat": "KYC",
+     "kind": "image",
+     "desc": "KYC profile with PhilSys and passport verification history.",
+     "size": "710 KB",
+     "uploaded": "Aug 6, 2026 · 02:12",
+     "by": "System",
+     "ev": true
+    },
+    {
+     "id": "a3",
+     "name": "KYC ECDD Case R251230760906904",
+     "file": "KYC_ECDD_R251230760906904.pdf",
+     "cat": "Case History",
+     "kind": "pdf",
+     "desc": "Approved 12/30/2025. Analyst notes, decision and document list.",
+     "size": "440 KB",
+     "pages": 4,
+     "uploaded": "Sep 23, 2026 · 11:44",
+     "by": "Adam A.",
+     "ev": true
+    },
+    {
+     "id": "a4",
+     "name": "Dependent's Birth Certificate",
+     "file": "Birth_Certificate_Dependent.png",
+     "cat": "KYC",
+     "kind": "image",
+     "desc": "Accepted 05/31/2023 in the KYC ECDD review. Names the sender as the father.",
+     "size": "1.3 MB",
+     "uploaded": "May 31, 2023 · 03:27",
+     "by": "KYC ECDD",
+     "ev": true
+    },
+    {
+     "id": "a5",
+     "name": "Proof of Address",
+     "file": "Proof_of_Address.png",
+     "cat": "KYC",
+     "kind": "image",
+     "desc": "Not accepted in the KYC ECDD review (image unreadable).",
+     "size": "890 KB",
+     "uploaded": "May 31, 2023 · 03:26",
+     "by": "KYC ECDD",
+     "ev": false
+    }
+   ],
+   "log": [
+    {
+     "id": "l1",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:45:30 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "KYC ECDD R251230760906904 (12/30/2025) approved the same relationship: the sender supports his daughter, who is cared for by the receiver. Pattern is unchanged since approval."
+    },
+    {
+     "id": "l2",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:43:02 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Open-source checks on both parties: no adverse findings. Sex offender registry: no match for the sender."
+    },
+    {
+     "id": "l3",
+     "type": "Note Added",
+     "ts": "2026-09-23 11:40:18 AM",
+     "who": "Adam A.",
+     "note": true,
+     "text": "Receiver used 2 IDs (PhilSys and passport) with the same name and DOB. Address variants are formatting only."
+    },
+    {
+     "id": "l4",
+     "type": "Review",
+     "ts": "2026-09-23 11:38:40 AM",
+     "who": "Adam A.",
+     "text": "Adam A. opened case."
+    },
+    {
+     "id": "l5",
+     "type": "System",
+     "ts": "2026-08-06 02:11:04 AM",
+     "text": "Child exploitation typology detected. Investigation is required before this case can be closed."
+    },
+    {
+     "id": "l6",
+     "type": "Transaction",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Flagged 9 transactions of $180 or less between 07/08 and 08/05/2026 from Ernesto Villamor."
+    },
+    {
+     "id": "l7",
+     "type": "Assignment",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Case assigned to analyst Adam A. (US Advanced)."
+    },
+    {
+     "id": "l8",
+     "type": "Case Created",
+     "ts": "2026-08-06 02:11:03 AM",
+     "text": "Case auto-generated by rule 16.304818 (Child Exploitation BR) and routed to US Advanced, Auto Tier 2."
+    }
+   ],
+   "media": [
+    {
+     "id": "m1",
+     "src": "National sex offender registry",
+     "kind": "Registry",
+     "ago": "Today",
+     "head": "No registrant match for Ernesto Villamor in Colorado",
+     "date": "Sep 23, 2026 · 11:42 AM",
+     "rel": 0,
+     "sum": "Searched by name, DOB and state. No match. One partial name match in Florida has a different DOB (born 1941).",
+     "url": "https://records.example.com/registry/search"
+    },
+    {
+     "id": "m2",
+     "src": "@maricel.dizon",
+     "kind": "Social",
+     "ago": "1 day ago",
+     "head": "Public photos with a young child; mentions caring for a relative's daughter",
+     "date": "Sep 22, 2026 · 07:18 PM",
+     "rel": 68,
+     "sum": "Public profile from Cainta, Rizal. Posts show the receiver with a school-age child and thank \"Papa Ernie\" for school supplies. Consistent with the KYC explanation. No adverse content.",
+     "url": "https://social.example.com/maricel.dizon"
+    },
+    {
+     "id": "m3",
+     "src": "Rizal Provincial News",
+     "kind": "News",
+     "ago": "4 days ago",
+     "head": "Cainta barangay announces scholarship program for elementary students",
+     "date": "Sep 19, 2026 · 08:00 AM",
+     "rel": 8,
+     "sum": "Local news. Neither party is named. Not relevant.",
+     "url": "https://news.example.com/rizal/cainta-scholarships"
+    },
+    {
+     "id": "m4",
+     "src": "Sanctions & watchlists",
+     "kind": "Registry",
+     "ago": "Today",
+     "head": "No match for the receiver or sender",
+     "date": "Sep 23, 2026 · 11:42 AM",
+     "rel": 0,
+     "sum": "Screened against OFAC SDN, consolidated lists and PEP databases. No matches.",
+     "url": "https://screening.example.com/results/c2608-583"
+    }
+   ],
+   "specifics": "The sender, a 51-year-old retired US resident, made 31 transfers to the 33-year-old receiver in Cainta, Rizal, 9 of them for $180.00 or less within 30 days, which triggered the child exploitation business rule.",
+   "priorSentence": "",
+   "xrMitigating": "Conducted investigation of internal WU records on the primary, resulting in mitigating findings. Findings were documented in case # R251230760906904, where KYC approved the same relationship on 12/30/2025.",
+   "relAlert": "1 sender and 2 historical senders from KYC records were identified in Relationships. The main sender is pre-loaded below.",
+   "nb": {
+    "reportType": "XR",
+    "alert": "16.304818 · Child exploitation BR",
+    "typology": "Child exploitation (rule-driven)",
+    "start": "June 10, 2026",
+    "end": "September 20, 2026",
+    "currency": "USD",
+    "scope": "intl",
+    "name": "Maricel Joy Dizon",
+    "gid": "1000000000115935103",
+    "since": "October 1, 2018",
+    "dob": "November 20, 1992",
+    "nationality": "Philippines",
+    "employer": "",
+    "risk": "Low",
+    "total": "$8,602.00",
+    "txns": "31",
+    "threshold": "other",
+    "accounts": "no",
+    "locations": "yes",
+    "aware": "no",
+    "cp": "Ernesto Villamor",
+    "cpCountry": "United States",
+    "rel": "family",
+    "multi": "no",
+    "biz": "no",
+    "third": "no",
+    "priorSar": "no",
+    "law": "no",
+    "decision": "XR"
+   },
+   "riskSuggest": "Low",
+   "stats": {
+    "txns": 31,
+    "total": 8602
+   },
+   "sampleData": true,
+   "flags": [
+    {
+     "id": "CHILD",
+     "kind": "typology",
+     "evidence": [
+      "3000000005",
+      "3000000006",
+      "3000000007",
+      "3000000008",
+      "3000000010",
+      "3000000011",
+      "3000000012",
+      "3000000014",
+      "3000000015"
+     ],
+     "why": "9 transfers of $180 or less from one US sender within 30 days (07/08–08/05). The sender is 18 years older than the receiver; no shared last name."
+    },
+    {
+     "id": "HF",
+     "kind": "likely",
+     "evidence": [],
+     "why": "12 transfers between 07/08/2026 and 08/06/2026."
+    },
+    {
+     "id": "MAGENT",
+     "kind": "potential",
+     "evidence": [
+      "3000000001",
+      "3000000003",
+      "3000000004",
+      "3000000019"
+     ],
+     "why": "Paid at 4 pay locations: 2 agents, a bank deposit and a second agent network."
+    },
+    {
+     "id": "MM",
+     "kind": "potential",
+     "evidence": [],
+     "why": "3 mobile numbers on the receiver profile."
+    },
+    {
+     "id": "INC",
+     "kind": "potential",
+     "evidence": [],
+     "why": "The tool counted 5 address records. They are the same Cainta address typed differently."
+    }
+   ],
+   "autofile": [
+    {
+     "id": "false",
+     "label": "False data",
+     "result": "pass",
+     "detail": "The receiver used 2 IDs (PhilSys and passport) with the same name and DOB."
+    },
+    {
+     "id": "share",
+     "label": "ID sharing",
+     "result": "pass",
+     "detail": "Neither ID appears on another person."
+    },
+    {
+     "id": "incons",
+     "label": "Inconsistent data",
+     "result": "watch",
+     "detail": "5 address records, but they differ only in formatting. 3 mobile numbers on file."
+    }
+   ],
+   "screening": [
+    "KYC Approved",
+    "Interdictions: Clear",
+    "Non PEP",
+    "Sanctions: Clear"
+   ],
+   "metrics": {
+    "countries": [
+     {
+      "cc": "US",
+      "name": "United States",
+      "side": "Send",
+      "age": 51,
+      "tc": 31,
+      "ccount": 1,
+      "amt": 8602,
+      "dr": "3 mo 1 wk 5 d",
+      "ipc": 15480,
+      "iph": 43585,
+      "pop": 331002651
+     },
+     {
+      "cc": "PH",
+      "name": "Philippines",
+      "side": "Pay",
+      "age": 33,
+      "tc": 31,
+      "ccount": 1,
+      "amt": 8602,
+      "dr": "3 mo 1 wk 6 d",
+      "ipc": 478,
+      "iph": 2401,
+      "pop": 109581078
+     }
+    ],
+    "dm": {
+     "inGid": 1,
+     "outGid": 1,
+     "wucom": 31,
+     "agIn": 2,
+     "agOut": 6
+    }
+   }
+  }
+ ],
+ "FLAG_LIB": {
+  "STR3K": {
+   "label": "Structuring 3K",
+   "internal": "Structuring 3K",
+   "score": 3,
+   "sa": [
+    "STR-BSA"
+   ]
+  },
+  "MC": {
+   "label": "Multiple consumers",
+   "internal": "Multiple Consumers",
+   "score": 1,
+   "sa": [
+    "OTH-2PLUS"
+   ]
+  },
+  "PAYOUT": {
+   "label": "Payout avoidance",
+   "internal": "Payout Avoidance",
+   "score": 1,
+   "sa": []
+  },
+  "PREV": {
+   "label": "Previously reported",
+   "internal": "Previously reported",
+   "score": 0,
+   "sa": []
+  },
+  "MJ": {
+   "label": "Multiple jurisdictions",
+   "internal": "Multiple Jurisdictions",
+   "score": 1,
+   "sa": [
+    "ML-MULTILOC"
+   ]
+  },
+  "HF": {
+   "label": "High frequency (12+ in 30 days)",
+   "internal": "High Frequency",
+   "score": 1,
+   "sa": []
+  },
+  "HV": {
+   "label": "High value $10K–$14,999",
+   "internal": "High Value",
+   "score": 1,
+   "sa": []
+  },
+  "SPLIT": {
+   "label": "Splitting",
+   "internal": "Splitting",
+   "score": 2,
+   "sa": [
+    "STR-BSA"
+   ]
+  },
+  "SWB": {
+   "label": "Southwest border city of concern",
+   "internal": "SWB High Risk Jurisdiction",
+   "score": 2,
+   "sa": []
+  },
+  "CHILD": {
+   "label": "Child exploitation typology",
+   "internal": "Child Exploitation BR",
+   "score": 3,
+   "sa": [
+    "OTH-HUMTRAF"
+   ]
+  },
+  "MAGENT": {
+   "label": "Multiple pay agents",
+   "internal": "Multiple Agents",
+   "score": 1,
+   "sa": [
+    "ML-MULTILOC"
+   ]
+  },
+  "MM": {
+   "label": "Multiple mobile numbers",
+   "internal": "Multiple Mobiles",
+   "score": 1,
+   "sa": []
+  },
+  "INC": {
+   "label": "Inconsistent data",
+   "internal": "Inconsistent Data",
+   "score": 2,
+   "sa": []
+  },
+  "FALSE": {
+   "label": "False data",
+   "internal": "False Data",
+   "score": 3,
+   "sa": [
+    "OTH-NOPURPOSE"
+   ]
+  },
+  "FLIP": {
+   "label": "Flipping",
+   "internal": "Flipping",
+   "score": 3,
+   "sa": [
+    "ML-OOP"
+   ]
+  }
+ },
+ "FLAG_KIND": {
+  "likely": {
+   "t": "Likely",
+   "c": "red"
+  },
+  "potential": {
+   "t": "Potential",
+   "c": "gold"
+  },
+  "typology": {
+   "t": "Typology",
+   "c": "magenta"
+  },
+  "history": {
+   "t": "From history",
+   "c": "blue"
+  },
+  "analyst": {
+   "t": "Added by you",
+   "c": "purple"
+  }
+ },
+ "DISMISS_REASONS": [
+  {
+   "value": "mitigated",
+   "label": "Mitigated by prior approval or evidence"
+  },
+  {
+   "value": "notsupported",
+   "label": "Not supported by the transactions"
+  },
+  {
+   "value": "falsepos",
+   "label": "Tool false positive"
+  },
+  {
+   "value": "below",
+   "label": "Below the threshold for this flag"
+  }
+ ],
+ "SA_CODES": [
+  {
+   "value": "STR-BSA",
+   "cat": "Structuring",
+   "label": "Transaction(s) below BSA recordkeeping threshold"
+  },
+  {
+   "value": "STR-CTR",
+   "cat": "Structuring",
+   "label": "Transaction(s) below CTR threshold"
+  },
+  {
+   "value": "STR-ALTER",
+   "cat": "Structuring",
+   "label": "Alters or cancels transaction to avoid BSA recordkeeping requirement"
+  },
+  {
+   "value": "STR-INQ",
+   "cat": "Structuring",
+   "label": "Suspicious inquiry by customer regarding BSA reporting or recordkeeping"
+  },
+  {
+   "value": "OTH-2PLUS",
+   "cat": "Other suspicious activities",
+   "label": "Two or more individuals working together"
+  },
+  {
+   "value": "OTH-NOPURPOSE",
+   "cat": "Other suspicious activities",
+   "label": "Transaction with no apparent economic, business, or lawful purpose"
+  },
+  {
+   "value": "OTH-HUMTRAF",
+   "cat": "Other suspicious activities",
+   "label": "Human trafficking"
+  },
+  {
+   "value": "OTH-HUMSMUG",
+   "cat": "Other suspicious activities",
+   "label": "Human smuggling"
+  },
+  {
+   "value": "OTH-ELDER",
+   "cat": "Other suspicious activities",
+   "label": "Elder financial exploitation"
+  },
+  {
+   "value": "ML-MULTILOC",
+   "cat": "Money laundering",
+   "label": "Suspicious use of multiple transaction locations"
+  },
+  {
+   "value": "ML-SOURCE",
+   "cat": "Money laundering",
+   "label": "Suspicious concerning the source of funds"
+  },
+  {
+   "value": "ML-EFT",
+   "cat": "Money laundering",
+   "label": "Suspicious EFT/wire transfers"
+  },
+  {
+   "value": "ML-3P",
+   "cat": "Money laundering",
+   "label": "Suspicious use of third-party transactors (straw-man)"
+  },
+  {
+   "value": "ML-FUNNEL",
+   "cat": "Money laundering",
+   "label": "Funnel account"
+  },
+  {
+   "value": "ML-OOP",
+   "cat": "Money laundering",
+   "label": "Transaction out of pattern for customer(s)"
+  },
+  {
+   "value": "FR-MASS",
+   "cat": "Fraud",
+   "label": "Mass-marketing"
+  },
+  {
+   "value": "FR-WIRE",
+   "cat": "Fraud",
+   "label": "Wire"
+  }
+ ]
+}
